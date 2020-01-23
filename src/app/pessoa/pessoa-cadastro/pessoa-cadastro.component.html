@@ -1,0 +1,49 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Nova Pessoa</h1>
+      </div>
+      <div class="ui-g-12 ui-fluid">
+        <label>Nome</label>
+        <input pInputText [(ngModel)]="pessoa.nome" name="nome" type="text">
+      </div>
+      <div class="ui-g-12 ui-md-9 ui-fluid">
+        <label>Logradouro</label>
+        <input [(ngModel)]="pessoa.endereco.logradouro" name="logradouro" pInputText type="text">
+      </div>
+      <div class="ui-g-12 ui-md-3 ui-fluid">
+        <label>Número</label>
+        <input pInputText [(ngModel)]="pessoa.endereco.numero" name="numero" type="text">
+      </div>
+      <div class="ui-g-12 ui-md-4 ui-fluid">
+        <label>Complemento</label>
+        <input pInputText [(ngModel)]="pessoa.endereco.complemento" name="complemento" type="text">
+      </div>
+      <div class="ui-g-12 ui-md-4 ui-fluid">
+        <label>Bairro</label>
+        <input pInputText [(ngModel)]="pessoa.endereco.bairro" name="bairro" type="text">
+      </div>
+      <div class="ui-g-12 ui-md-4 ui-fluid">
+        <label>CEP</label>
+        <p-inputMask mask="99999-999" [(ngModel)]="pessoa.endereco.cep" name="cep"></p-inputMask>
+      </div>
+      <div class="ui-g-12 ui-md-6 ui-fluid">
+        <label>Cidade</label>
+        <input [(ngModel)]="pessoa.endereco.cidade" name="cidade" pInputText type="text">
+      </div>
+      <div class="ui-g-12 ui-md-6 ui-fluid">
+        <label>Estado</label>
+        <input [(ngModel)]="pessoa.endereco.estado" name="estado" pInputText type="text">
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar"></button>
+        <button pButton type="button" (click)="novo(f)" label="Novo" class="ui-button-info"></button>
+        <a routerLink="/pessoas">Voltar para a pesquisa</a>
+      </div>
+    </div>
+
+  </form>
+</div>

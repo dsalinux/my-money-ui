@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #404c51;
+}
+
+label {
+  font-weight: bold;
+}
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+@media  (min-width: 600px){
+  .container {
+    width: 90%;
+  }
+}
+
+@media  (min-width: 1200px){
+  .container {
+    width: 85%;
+  }
+}
+.col-valor {
+  width: 100px;
+  text-align: right;
+}
+
+.col-data {
+  width: 100px;
+  text-align: center;
+}
+
+.col-acoes {
+  width: 90px;
+  text-align: center;
+}
+.fa-solve {
+margin-right: 3px;
+}
